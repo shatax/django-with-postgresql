@@ -1,4 +1,9 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+
 {% if books_list %}
+    <h3>The Lists of the Books</h3>
     <ul>
     {% for book in books_list %}
         <li><a>{{ book.name }}</a></li>
@@ -7,3 +12,5 @@
 {% else %}
     <p>No books are available.</p>
 {% endif %}
+
+{% endblock %}

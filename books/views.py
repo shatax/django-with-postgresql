@@ -5,7 +5,7 @@ from .models import Books
 
 def index(request):
     books_list = Books.objects.order_by('-date_added')[:]
-    template = loader.get_template('books/index.html')
+    template = loader.get_template('books/home.html')
 
     context = {
         'books_list': books_list,
